@@ -105,6 +105,9 @@ import { MatListModule} from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 //PrimeNG Imports
+
+import { PrimeIcons } from 'primeng/api';
+import { CalendarModule } from 'primeng/calendar';
 import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { ProgressBarModule } from 'primeng/progressbar';
@@ -142,6 +145,7 @@ import localePT from '@angular/common/locales/pt';
 import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
+import { CalendarioComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/calendario/calendario.component';
 
 registerLocaleData(localePT);
 registerLocaleData(localeES);
@@ -155,7 +159,7 @@ registerLocaleData(localeFR);
     NovoCursoComponent,
     AtualizarCursoComponent,
     DialogExclusaoCursosComponent,
-    ListagemBadgesComponent,    
+    ListagemBadgesComponent,
     DialogExclusaoBadgeComponent,
     NovoBadgeComponent,
     AtualizarBadgeComponent,
@@ -197,9 +201,14 @@ registerLocaleData(localeFR);
     ComentarioComponent,
     ListaObjetosAprendizagem,
     CardNotificacaoComponent,
-    NovaPerguntaComponent
+    NovaPerguntaComponent,
+
+    CalendarioComponent
   ],
   imports: [
+
+
+    CalendarModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -214,7 +223,7 @@ registerLocaleData(localeFR);
     MatDividerModule,
     MatSelectModule,
     MatGridListModule,
-    MatDialogModule,    
+    MatDialogModule,
     FormsModule,
     MatAutocompleteModule,
     MatPaginatorModule,
@@ -232,8 +241,9 @@ registerLocaleData(localeFR);
         tokenGetter: PegarTokenUsuario,
         allowedDomains: ['localhost:5099'],
         disallowedRoutes: []
-      }      
+      }
     }),
+
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
@@ -267,8 +277,8 @@ registerLocaleData(localeFR);
     CursoTiposService,
     FuncoesService,
     OfertasService,
-    AuthGuardService,    
-    HttpClientModule, 
+    AuthGuardService,
+    HttpClientModule,
     {provide:LocationStrategy, useClass:HashLocationStrategy},
     {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
   ],

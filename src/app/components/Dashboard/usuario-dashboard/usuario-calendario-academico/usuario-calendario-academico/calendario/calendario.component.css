@@ -1,0 +1,30 @@
+.dia-feriado {
+  background-color: red;
+}
+
+.dia-letivo {
+  background-color: green;
+}
+
+.dia-nao-letivo {
+  background-color: yellow;
+}
+
+.inicio-periodo {
+  background-color: blue;
+}
+
+.termino-periodo {
+  background-color: purple;
+}
+
+.sabado-letivo {
+  background-color: orange;
+}
+
+.recesso-institucional {
+  background-color: gray;
+}
+
+
+

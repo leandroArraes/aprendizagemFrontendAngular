@@ -1,4 +1,4 @@
-import { DiaLetivo } from './../../../../../models/DiaLetivo';
+import { DiaLetivo } from 'src/app/models/DiaLetivo';
 import { Component, OnInit } from '@angular/core';
 import { MatCalendarCellCssClasses } from '@angular/material/datepicker';
 import { DiaLetivoService } from 'src/app/services/dia-letivo.service';
@@ -6,12 +6,19 @@ import { EstudantesService } from 'src/app/services/estudante.service';
 import { AuthGuardService } from 'src/app/services/auth-guard.service';
 import { Estudante } from 'src/app/models/Estudante';
 import { CalendarModule } from 'primeng/calendar';
+import { getISOWeek } from 'date-fns';
+import { PrimeNGConfig } from 'primeng/api';
+
+
+
 @Component({
-  selector: 'app-usuario-calendario-academico',
-  templateUrl: './usuario-calendario-academico.component.html',
-  styleUrls: ['./usuario-calendario-academico.component.css']
+  selector: 'app-calendario',
+  templateUrl: './calendario.component.html',
+  styleUrls: ['./calendario.component.css']
 })
-export class UsuarioCalendarioAcademicoComponent implements OnInit {
+export class CalendarioComponent implements OnInit {
+
+  date: Date[];
 
   idEstudanteUsuarioLogado : number;
   cdiasLetivos: DiaLetivo[];
@@ -65,6 +72,9 @@ export class UsuarioCalendarioAcademicoComponent implements OnInit {
     });
 
     this.loading = false;
+
+
+
 
 
     // this.diasLetivos = [new Date('12/01/2022'), new Date('12/02/2022'), new Date('12/05/2022'), new Date('12/06/2022'), new Date('12/07/2022'), new Date('12/08/2022'), new Date('12/09/2022'), new Date('12/12/2022'), new Date('12/13/2022'), new Date('12/14/2022'), new Date('12/15/2022')];
@@ -133,4 +143,8 @@ export class UsuarioCalendarioAcademicoComponent implements OnInit {
     };
   }
 
+
+  getWeekNumber(date: Date): number {
+    return getISOWeek(date);
+  }
 }

@@ -1,0 +1,14 @@
+<!-- <div class="card flex justify-content-center">
+  <p-calendar class="max-w-full" [(ngModel)]="date" >
+    <ng-template pTemplate="date" let-date>
+      <span class="week-number">{{ getWeekNumber(date) }}</span>
+      <span class="day-number">{{ date | date: 'd' }}</span>
+    </ng-template>
+  </p-calendar>
+</div> -->
+
+
+<div class="card flex justify-content-center">
+  <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true" [showWeek]="true"></p-calendar>
+</div>
+
