@@ -5,22 +5,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .dia-feriado {
     background-color: red !important;
+    color: white;
+    font-size: ;
+    font-weight: bold;
+    border-radius: 100%;
 }
 .dia-letivo {
-    background-color: lightgreen !important;
+    color: green !important;
 }
 .dia-nao-letivo {
     background-color: rgb(255, 255, 255) !important;
+    border-radius: 100%;
 }
 .inicio-periodo {
     background-color: rgb(160, 108, 160) !important;
+    border-radius: 100%;
 }
 .termino-periodo {
     background-color: rgb(160, 108, 160) !important;
+    border-radius: 100%;
 }
 .sabado-letivo {
-    background-color: lightskyblue !important;
+    background-color: rgb(197, 212, 221) !important;
+
+
 }
 .recesso-institucional {
     background-color: gray !important;
+    border-radius: 100%;
+}
+.vento
+{
+  background-color: yellow;
+  border-radius: 100%;
 }

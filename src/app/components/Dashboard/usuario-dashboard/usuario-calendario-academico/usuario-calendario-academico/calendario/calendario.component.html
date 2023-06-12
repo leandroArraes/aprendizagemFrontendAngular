@@ -1,14 +1,19 @@
-<!-- <div class="card flex justify-content-center">
-  <p-calendar class="max-w-full" [(ngModel)]="date" >
-    <ng-template pTemplate="date" let-date>
-      <span class="week-number">{{ getWeekNumber(date) }}</span>
-      <span class="day-number">{{ date | date: 'd' }}</span>
-    </ng-template>
-  </p-calendar>
-</div> -->
+<mat-card class="demo-inline-calendar-card flex-row-reverse">
 
+  <div class="teste">
+    <i class="pi pi-bell mr-4 p-text-secondary justify-content-end  cursor-pointer p-overlay-badge" (click)="showDialog()" pBadge value="{{atencaoTotal}}" style="font-size: 2rem"  severity="danger"></i>
+    <p-dialog  [(visible)]="visible" [style]="{width: '550px'}" >
+   <app-usuario-proximas-atividades ></app-usuario-proximas-atividades>
+</p-dialog>
 
-<div class="card flex justify-content-center">
-  <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true" [showWeek]="true"></p-calendar>
 </div>
+
+  <mat-calendar [(selected)]="selected"> </mat-calendar>
+  
+  <div *ngIf="selected">
+    <h4 class="header"><b>Entrega: {{ mostrar(selected) }}</b></h4>
+  </div>
+
+
+</mat-card>
 

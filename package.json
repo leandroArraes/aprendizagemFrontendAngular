@@ -23,6 +23,7 @@
     "@angular/router": "^14.2.10",
     "@auth0/angular-jwt": "^5.0.2",
     "date-fns": "^2.30.0",
+    "ics": "^3.1.0",
     "jwt-decode": "^3.1.2",
     "ngx-drag-scroll": "^14.0.1",
     "ngx-mask": "^13.1.1",

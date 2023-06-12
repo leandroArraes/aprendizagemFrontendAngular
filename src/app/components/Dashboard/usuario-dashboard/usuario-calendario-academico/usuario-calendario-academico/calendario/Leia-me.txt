@@ -1,3 +1,7 @@
 npm install date-fns
 npm install primeflex@3.5.0 --save
 npm install primeicons --save
+npm install ics
+
+
+import { BadgeModule } from 'primeng/badge';

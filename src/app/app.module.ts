@@ -105,6 +105,8 @@ import { MatListModule} from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 //PrimeNG Imports
+import { BadgeModule } from 'primeng/badge';
+import { createEvent } from 'ics';
 
 import { PrimeIcons } from 'primeng/api';
 import { CalendarModule } from 'primeng/calendar';
@@ -146,6 +148,7 @@ import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
 import { CalendarioComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/calendario/calendario.component';
+import { AgendaDialogComponentComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/agenda-dialog-component/agenda-dialog-component.component';
 
 registerLocaleData(localePT);
 registerLocaleData(localeES);
@@ -203,7 +206,8 @@ registerLocaleData(localeFR);
     CardNotificacaoComponent,
     NovaPerguntaComponent,
 
-    CalendarioComponent
+    CalendarioComponent,
+      AgendaDialogComponentComponent
   ],
   imports: [
 
@@ -244,6 +248,7 @@ registerLocaleData(localeFR);
       }
     }),
 
+    BadgeModule,
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,

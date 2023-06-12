@@ -1,30 +1,24 @@
-.dia-feriado {
-  background-color: red;
+.demo-inline-calendar-card {
+  width: 300px;
 }
 
-.dia-letivo {
-  background-color: green;
+.has-activity {
+  background-color: red !important;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem;
 }
 
-.dia-nao-letivo {
-  background-color: yellow;
+.teste
+{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.inicio-periodo {
-  background-color: blue;
-}
+.cursor-pointer:hover{
+  cursor: pointer;
 
-.termino-periodo {
-  background-color: purple;
-}
 
-.sabado-letivo {
-  background-color: orange;
 }
-
-.recesso-institucional {
-  background-color: gray;
-}
-
 
 
