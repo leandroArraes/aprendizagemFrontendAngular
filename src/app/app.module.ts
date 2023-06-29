@@ -148,7 +148,7 @@ import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
 import { CalendarioComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/calendario/calendario.component';
-import { AgendaDialogComponentComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/agenda-dialog-component/agenda-dialog-component.component';
+// import { AgendaDialogComponentComponent } from './components/Dashboard/usuario-dashboard/usuario-calendario-academico/usuario-calendario-academico/agenda-dialog-component/agenda-dialog-component.component';
 
 registerLocaleData(localePT);
 registerLocaleData(localeES);
@@ -207,7 +207,7 @@ registerLocaleData(localeFR);
     NovaPerguntaComponent,
 
     CalendarioComponent,
-      AgendaDialogComponentComponent
+
   ],
   imports: [
 

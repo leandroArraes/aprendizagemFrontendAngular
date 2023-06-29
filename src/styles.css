@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -6,12 +6,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .dia-feriado {
     background-color: red !important;
     color: white;
-    font-size: ;
+
     font-weight: bold;
     border-radius: 100%;
 }
 .dia-letivo {
     color: green !important;
+    background-color: green;
 }
 .dia-nao-letivo {
     background-color: rgb(255, 255, 255) !important;
@@ -38,4 +39,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
   background-color: yellow;
   border-radius: 100%;
+} */
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dia-feriado {
+    background-color: red !important;
+}
+.dia-letivo {
+    background-color: lightgreen !important;
+}
+.dia-nao-letivo {
+    background-color: rgb(255, 255, 255) !important;
+}
+.inicio-periodo {
+    background-color: rgb(160, 108, 160) !important;
+}
+.termino-periodo {
+    background-color: rgb(160, 108, 160) !important;
+}
+.sabado-letivo {
+    background-color: lightskyblue !important;
+}
+.recesso-institucional {
+    background-color: gray !important;
+}
+
+.p-button.p-fileupload-choose {
+    background-color: blue;
+    color: white;
 }
