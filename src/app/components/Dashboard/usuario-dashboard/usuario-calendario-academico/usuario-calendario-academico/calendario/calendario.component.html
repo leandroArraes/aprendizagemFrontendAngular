@@ -1,21 +1,22 @@
 <mat-card class="demo-inline-calendar-card flex-row-reverse">
 
   <div class="teste">
-
-    <i class="pi pi-bell mr-4 p-text-secondary justify-content-end  cursor-pointer p-overlay-badge" (click)="showDialog()" pBadge value="{{atencaoTotal}}" style="font-size: 2rem"  severity="danger"></i>
-    <p-dialog  [(visible)]="visible" [style]="{width: '550px'}" >
-   <app-usuario-proximas-atividades ></app-usuario-proximas-atividades>
-</p-dialog>
-
-</div>
+    <i class="pi pi-bell mr-4 p-text-secondary justify-content-end cursor-pointer p-overlay-badge" (click)="showDialog()" pBadge value="{{atencaoTotal}}" style="font-size: 2rem" severity="danger"></i>
+    <p-dialog [(visible)]="visible" [style]="{width: '550px'}">
+      <app-usuario-proximas-atividades></app-usuario-proximas-atividades>
+    </p-dialog>
+  </div>
 
   <mat-calendar [(selected)]="selected" [dateClass]="dateClass()"> </mat-calendar>
 
   <div *ngIf="selected">
     <h4 class="header"><b>Entrega: {{ mostrar(selected) }}</b></h4>
-    <button (click)="addToCalendar()">sincronizar</button>
+    <ng-container *ngIf="hasEvent; else noEventMessage">
+      <button (click)="addToCalendar()">Sincronizar</button>
+    </ng-container>
+    <ng-template #noEventMessage>
+      <p>Sem eventos para este dia</p>
+    </ng-template>
   </div>
 
-
 </mat-card>
-

@@ -170,9 +170,12 @@ export class CalendarioComponent implements OnInit {
   showDialog() {
     this.visible = true;
 }
+hasEvent: boolean = false;
 
 
 mostrar(selected: Date): string {
+  this.hasEvent = false; // Define inicialmente como false
+
   if (!selected) {
     return ''; // Retorna uma string vazia se a data selecionada for nula ou indefinida
   }
@@ -187,6 +190,9 @@ mostrar(selected: Date): string {
     const dataFim = new Date(primeiraAtividade.dataFim);
     const dia = dataFim.getDate();
     const descricao = primeiraAtividade.descricao;
+
+    // Define a propriedade hasEvent como true
+    this.hasEvent = true;
 
     // Retorna a string com o dia e a descrição da atividade
     return `${dia}/${dataFim.getMonth() + 1}/${dataFim.getFullYear()} - ${descricao}`;
